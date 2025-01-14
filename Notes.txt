@@ -1,0 +1,42 @@
+1) npm i dans le front et dans le back
+2) [front] créer fichier app.tsx dans src
+3) [front] créer dossier pages dans src
+4) [front] écrire fct homepage = () => {return code html}
+5) [front] écrire const layout dans components/layout/index.tsx
+6) [front] écrire interface layoutProps dans components/layout/index.tsx
+7) [front] écrire type Links dans types.ts
+8) [front] créer fichiers Header.tsx et Footer.tsx dans layout
+9) [front] écrire le formulaire --> créer le ficher Loginform.tsx dans le dossier components
+10)[front] écrire le fetch (fetch('lien'{...}).then{(response => { if(response = ok) ... });});
+11)[front] écrire le localstorage (localstorage.getItem('username')? <Profile/> : <Login/>) dans Homepage.tsx
+12)[front] créer le bouton logout : logout = localstorage.removeItem() + window.location.reload();
+13)[front] créer la route /library dans app.tsx
+14)[front] créer libraryPage.tsx dans le dossier pages
+15)[front] utiliser localstorage pour afficher les infos si on est connecté et un message d'erreur si on n'est pas connecter (comme pour le form)
+16)[front] créer composant Library (index.tsx) dans components
+17) [back] créer dossier data dans backend
+18) [back] créer fichier library.json dans data
+19)[front] écrire le tableau de livres dans index.tsx dans Library (let [books, setBooks = useState(<Book[]>([]);)])
+20)[front] écrire le type Books dans types.ts
+21)[front] écrire le fetch depuis Library vers localhost3000/library/getAllBooks pour chercher les livres (+.then(response)...)
+22)[front] écrire books.map dans le return pour afficher les livres
+23)[front] créer le bouton + onClick + handleClick pour le bouton des détails
+24)[front] écrire la méthode handleClick avec(book.id:number) en paramètre
+25) [back] créer le routeur library (créer le fichier library.ts dans routes) + modifier app.ts
+26) [back] écrire les fonctions router.get("/getAllBooks") dans library.ts
+27) [back] englober le fetch dans un useEffect
+28)[front] écrire la route "/book/:id" dans le return de App.tsx
+29)[front] créer et écrire Bookpage.tsx
+30)[front] écrire la const book, setBook (fetch,...)
+31) [back] écrire la fonction router.get("/getBookById")
+
+=== Notes diverses ===
+/!\ importer les images via un import!!
+
+ == FRONT ==
+app : cheminement des routes : return -> router -> routes -> route -> route -> path de la route
+dossier components : layout du site + dossier layout DANS components
+
+ == BACK  ==
+fetch dans auths.ts
+si problème avec req -> écrire _req
